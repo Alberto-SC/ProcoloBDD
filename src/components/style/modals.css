@@ -1,0 +1,347 @@
+h1{
+    text-align: center;
+}
+
+/* Modal de Login | CSS */
+.modallogin input[type=password],.modallogin input[type=text] {
+    color: #1b262d;
+    width: 60%;
+    margin: 8px 20% 5px 20%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+    box-sizing: border-box
+}
+#fpass1 {
+    background-color: #1b262d;
+    color: #fff;
+    border-radius: 20px;
+    margin: 0 0 0 17.5%;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 30%;
+    font-size: 90%;
+}
+#sesion1 {
+    background-color: #1b262d;
+    color: #fff;
+    border-radius: 20px;
+    padding: 1% 0.5%;
+    margin: 0 0 17.5% 0;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    font-size: 90%;
+}
+#fpass:hover,
+#sesion:hover {
+    opacity: .8
+}
+.tittlelogincontainer {
+    text-align: center;
+    margin: 0;
+    position: relative
+}
+.logincontainer {
+padding: 5px;
+border-radius: 200px
+}
+
+span.psw {
+float: right;
+padding-top: 16px
+}
+.modallogin {
+    /* display: none; */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, .4);
+    padding-top: 50px
+}
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 100%
+}
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: 700
+}
+.close:focus,
+.close:hover {
+color: red;
+cursor: pointer
+}
+.animate {
+-webkit-animation: animatezoom .6s;
+animation: animatezoom .6s
+}
+@-webkit-keyframes animatezoom {
+    from {
+            -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+        from {
+                transform: scale(0)
+        }
+        to {
+                transform: scale(1)
+        }
+}
+
+@media screen and (min-width:320px) and (max-width: 1024px){
+    span.psw {
+            display: block;
+            float: none
+    }
+    .modal-content{
+        width: 90%;
+        font-size: 0.8em;
+    }
+}
+
+/* Modal de Registro | CSS */
+#apma,#appa,#bole,#cpassw,#email,
+#nomb,#nump,#passw,#user {
+    color: #1b262d;
+    width: 100%;
+    padding: 6px 10px;
+    margin: 1%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box
+}	
+#cancelar{
+    background-color: #1b262d;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 2px;
+    margin: .5% .5% .5% 17.5%;
+    border: none;
+    cursor: pointer;
+    width: 30%
+}
+#registrar{
+    background-color: #1b262d;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 2px;
+    margin: .5% 17% .5% .5%;
+    border: none;
+    cursor: pointer;
+    width: 30%
+}
+#cancelar:hover,
+#registrar:hover {
+    opacity: .8
+}
+.tittleregiscontainer {
+    text-align: center;
+    margin: 12px 0 0 0;
+    position: relative
+}
+.regiscontainer {
+    padding: 5px;
+    border-radius: 200px
+}
+span.psw {
+    float: right;
+    padding-top: 16px
+}
+.modalregis {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, .4);
+    padding-top: 50px
+}
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 50%
+}
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: 700
+}
+.close:focus,
+.close:hover {
+    color: red;
+    cursor: pointer
+}
+.animate {
+    -webkit-animation: animatezoom .6s;
+    animation: animatezoom .6s
+}
+@-webkit-keyframes animatezoom {
+        from {
+                -webkit-transform: scale(0)
+        }
+        to {
+                -webkit-transform: scale(1)
+        }
+}
+
+@keyframes animatezoom {
+        from {
+                transform: scale(0)
+        }
+        to {
+                transform: scale(1)
+        }
+}
+
+@media screen and (min-width:320px) and (max-width: 1024px){
+    span.psw {
+            display: block;
+            float: none
+    }
+    .modal-content{
+        width: 90%;
+        font-size: 0.8em;
+    }
+}
+
+/* Modal de Protocolo | CSS */
+#nproto {
+    color: #1b262d;
+    width: 100%;
+    padding: 6px 10px;
+    margin: 1%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box
+}
+#registrar0{
+    background-color: #1b262d;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 2px;
+    margin: .5% 17% .5% .5%;
+    border: none;
+    cursor: pointer;
+    width: 30%
+}
+#cancelar0{
+    background-color: #1b262d;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 2px;
+    margin: .5% .5% .5% 17.5%;
+    border: none;
+    cursor: pointer;
+    width: 30%
+}
+#cancelar0:hover {
+    opacity: .8
+}
+.tittleprotcontainer {
+    text-align: center;
+    margin: 12px 0 0 0;
+    position: relative
+}
+.protcontainer {
+    padding: 5px;
+    border-radius: 200px
+}
+span.psw {
+    float: right;
+    padding-top: 16px
+}
+.modalprot {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, .4);
+    padding-top: 50px
+}
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 50%
+}
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: 700
+}	
+.close:focus,
+.close:hover {
+    color: red;
+    cursor: pointer
+}
+.animate {
+    -webkit-animation: animatezoom .6s;
+    animation: animatezoom .6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+            -webkit-transform: scale(0)
+    }
+    to {
+            -webkit-transform: scale(1)
+    }
+}
+@keyframes animatezoom {
+    from {
+            transform: scale(0)
+    }
+    to {
+            transform: scale(1)
+    }
+}
+@media screen and (min-width:320px) and (max-width: 1024px){
+    span.psw {
+            display: block;
+            float: none
+    }
+    .modal-content{
+        width: 90%;
+    }
+    #tittlepro{
+        width: 90%;
+    }
+}

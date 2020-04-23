@@ -1,0 +1,97 @@
+/* Typography
+================================================== */
+
+.btn.btn-primary{
+	border: 2px solid #1B262D;
+}
+
+.btn.btn-primary:hover{
+	background: #1B262D;
+}
+
+.btn.btn-primary.solid{
+	background: #1B262D;
+}
+
+ul.check-list li i{
+	color: #1B262B;
+}
+
+blockquote {
+	border-left: 5px solid #1B262D;
+}
+
+/* Common styles
+================================================== */
+
+.heading:hover .title-icon{
+	color: #1B262D;
+}
+
+h2.entry-title a:hover{
+	color: #1B262D;
+}
+
+/* Flex Slider */
+
+.portfolio-slider .flex-direction-nav a:hover,
+.second-slider .flex-direction-nav a:hover {
+	background: #1B262D;
+}
+
+/* Header area
+================================================== */
+
+/*-- Header --*/
+.header{
+	border-top: 15px solid #1B262D;
+}
+
+.header-solid ul.navbar-nav > li:hover > a, .header-solid ul.navbar-nav > li.active > a {
+  color: #3282B8;
+}
+
+/*-- Logo --*/
+
+.navbar-toggler{
+	background: #1B262D;
+}
+/*-- Main navigation --*/
+
+.nav-item.active{
+	color: #9BAEB2;
+}
+
+.nav-link:hover,.dropdown-item:hover{
+	color: #9BAEB2 !important;
+}
+/* Header area - 2
+================================================== */
+
+/*-- Header bgnone fixed --*/
+
+.header-bgnone{
+	background: #1B262D;
+}
+
+
+/* Slideshow
+================================================== */
+
+/*-- Main slide --*/
+
+#main-slide .carousel-indicators li.active,
+#main-slide .carousel-indicators li:hover {
+    background-color: #1B262D;
+}
+
+#main-slide .carousel-control i:hover{
+	background: #1B262D;
+}
+
+/* Image Block
+================================================== */
+
+.image-block-content .feature-icon{
+	background: #1B262D;
+}
