@@ -28,7 +28,10 @@ class PageHeader extends React.Component {
       <div>
       <div className="page-header header-filter">
         <div className="squares square1" />
-        <div className="squares square2" />
+        <div className="squares square2">
+          <span style={{marginBottom:'1em'}}><br/><br/><br/></span>
+          <img src={require('../../assets/img/logob.png')} />
+        </div>
         <div className="squares square3" />
         <div className="squares square4" />
         <div className="squares square5" />
