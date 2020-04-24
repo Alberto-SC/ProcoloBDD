@@ -40,11 +40,12 @@ class PageHeader extends React.Component {
         <Container>
           <div className="content-center brand">
             <h1 className="h1-seo">• Protocolos •</h1>
-            <h3 className="d-none d-sm-block">
-              <button className="btn-success btn-simple" onClick={()=>this.toggleModal("regisModal")}>Registrar protocolo</button>
-              <button className="btn-neutral btn-simple" onClick={()=>this.toggleModal("alumModal")}>Registrar alumno</button>
-            </h3>
           </div>
+          <div className="d-sm-block content-center">
+            <br/><br/><br/><br/><br/>
+              <button className="btn-success btn-simple btn-round" onClick={()=>this.toggleModal("regisModal")}>Registrar protocolo</button>
+              <button className="btn-neutral  btn-simple btn-round" onClick={()=>this.toggleModal("alumModal")}>Registrar alumno</button>
+            </div>
         </Container>
       </div>
       <div className="section section-javascript" id="javascriptComponents">
