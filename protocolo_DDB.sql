@@ -43,8 +43,8 @@ CREATE TABLE public."Alumno"
 
 CREATE TABLE public."PalabraClave" 
 (
-  numTT integer NOT NULL,
-  palabra character varying(25) NOT NULL,
+  numTT character varying(10) NOT NULL,
+  palabra character varying(100) NOT NULL,
   discriminante integer NOT NULL UNIQUE,
   CONSTRAINT PalabraClave PRIMARY KEY (numTT)
 );
@@ -83,10 +83,10 @@ CREATE TABLE public."pertenece"
 CREATE TABLE public."tiene" 
 (
   TT_numTT character varying(10) NOT NULL,
-  PC_numTT integer NOT NULL,
-  PRIMARY KEY (TT_numTT,PC_numTT),
+  pc_numtt character varying(10) NOT NULL,
+  PRIMARY KEY (TT_numTT,pc_numtt),
   FOREIGN KEY (TT_numTT) REFERENCES "Protocolo" (numTT),
-  FOREIGN KEY (PC_numTT) REFERENCES "PalabraClave" (numTT)
+  FOREIGN KEY (pc_numtt) REFERENCES "PalabraClave" (numTT)
 );
 
 -- Registros
@@ -136,3 +136,54 @@ INSERT INTO public."Academia"(
 		('ISC-07', 'Trabajo Terminal', '20135998763'),
 		('ISC-08', 'Ingeniería de Sotware', '20139546295'),
 		('ISC-09', 'Proyectos Estratégicos y Toma de decisiones', '20169843093');
+
+INSERT INTO public."pertenece"(
+	numemp, clave)
+	VALUES 
+    ('20139583984', 'ISC-01'),
+		('20139587564', 'ISC-02'),
+		('20139589362', 'ISC-03'),
+		('20139546285', 'ISC-04'),
+		('20139536474', 'ISC-05'),
+		('20139584321', 'ISC-06'),
+		('20135998763', 'ISC-07'),
+		('20139546295', 'ISC-08'),
+		('20169843093', 'ISC-09'),
+		('20169847381', 'ISC-01'),
+		('20169845173', 'ISC-02'),
+		('20129843093', 'ISC-03'),
+		('20129833001', 'ISC-04'),
+		('20129843647', 'ISC-05'),
+		('20119823043', 'ISC-06');
+
+INSERT INTO public."PalabraClave"(
+	numtt, palabra, discriminante)
+	VALUES 
+		('2020-A001', 'ingeniería artificial lenguaje', '01'),
+		('2020-A002', 'compilador inteligencia robot', '02'),
+		('2020-A003', 'software medicina discapacidad', '03'),
+		('2020-A004', 'gestión software finanzas', '04');
+
+INSERT INTO public."Protocolo"(
+	numtt, nombrett, ruta_pdf)
+	VALUES 
+    ('2020-A001', 'Prototipo de identificación de lenguaje', ''),
+    ('2020-A002', 'Compilador a través de un bot', ''),
+    ('2020-A003', 'Protitpo de ayuda para discapacidad visual', ''),
+    ('2020-A004', 'Plataforma web para ayuda al ahorro', '');
+
+INSERT INTO public."tiene"(
+	tt_numtt, pc_numtt)
+	VALUES 
+    ('2020-A001', '2020-A001'),
+    ('2020-A001', '2020-A001'),
+    ('2020-A001', '2020-A001'),
+    ('2020-A002', '2020-A002'),
+    ('2020-A002', '2020-A002'),
+    ('2020-A002', '2020-A002'),
+    ('2020-A003', '2020-A003'),
+    ('2020-A003', '2020-A003'),
+    ('2020-A003', '2020-A003'),
+    ('2020-A004', '2020-A004'),
+    ('2020-A004', '2020-A004'),
+    ('2020-A004', '2020-A004');
