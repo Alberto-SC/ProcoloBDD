@@ -35,7 +35,17 @@ CREATE TABLE `Academia` (
 
 LOCK TABLES `Academia` WRITE;
 /*!40000 ALTER TABLE `Academia` DISABLE KEYS */;
-INSERT INTO `Academia` VALUES (0,'Matemáticas',0),(1,'Ciencias',3);
+INSERT INTO `Academia` VALUES 
+		('ISC-01', 'Sistemas Digitales', '20139583984'),
+		('ISC-02', 'Sistemas Distribuidos', '20139587564'),
+		('ISC-03', 'Ciencias Básicas', '20139589362'),
+		('ISC-04', 'Ciencias de la computación', '20139546285'),
+		('ISC-05', 'Fundamentos de Sistemas Electrónicos', '20139536474'),
+		('ISC-06', 'Ciencias Sociales', '20139584321'),
+		('ISC-07', 'Trabajo Terminal', '20135998763'),
+		('ISC-08', 'Ingeniería de Sotware', '20139546295'),
+		('ISC-09', 'Proyectos Estratégicos y Toma de decisiones', '20169843093');
+
 /*!40000 ALTER TABLE `Academia` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,7 +72,18 @@ CREATE TABLE `Alumno` (
 
 LOCK TABLES `Alumno` WRITE;
 /*!40000 ALTER TABLE `Alumno` DISABLE KEYS */;
-INSERT INTO `Alumno` VALUES (20180,'Alumno0','Alumno0@alumno.ipn.mx','Alumno0','Alumno0',0),(20181,'Alumno1','Alumno1@alumno.ipn.mx','Alumno1','Alumno1',0),(20182,'Alumno2','Alumno2@alumno.ipn.mx','Alumno2','Alumno2',0),(20183,'Alumno3','Alumno3@alumno.ipn.mx','Alumno3','Alumno3',1),(20184,'Alumno4','Alumno4@alumno.ipn.mx','Alumno4','Alumno4',1),(20185,'Alumno5','Alumno5@alumno.ipn.mx','Alumno5','Alumno5',1);
+INSERT INTO `Alumno` VALUES 
+  (2016630197, 'Tafnes Jiménez Aguilar', 'tafnesL@gmail.com', 2016630197, 'HolaMundo97', '2020-A001'),
+	(2016630196, 'Luis Silva Cazares', 'alberto98@hotmail.com', 2016630196, 'HolaMundo96', '2020-A001'),
+	(2016630195, 'Isam Espinoza Flores', 'isaD197@gmail.com', 2016630195, 'HolaMundo95', '2020-A001'),
+	(2016630194, 'Pedro Ordoñez Morales', 'pedroLO98@gmail.com', 2016630194, 'HolaMundo94', '2020-A002'),
+	(2016630193, 'Luis Rojas Pérez', 'luisrope@hotmail.com', 2016630193, 'HolaMundo93', '2020-A002'),
+	(2016630192, 'Armando Pérez Rodríguez', 'armandopero@hotmail.com', 2016630192, 'HolaMundo92', '2020-A002'),
+	(2016630191, 'Daniel Lugo Martínez', 'dany27lm@gmail.com', 2016630191, 'HolaMundo91', '2020-A003'),
+	(2016630190, 'Sergio Díaz Juárez', 'sergio283dj@hotmail.com', 2016630190, 'HolaMundo90', '2020-A003'),
+	(2016630189, 'Diego Barrón López', 'diegobarron@gmail.com', 2016630189, 'HolaMundo89', '2020-A003'),
+	(2016630188, 'Vanesa Gutiérrez Ruiz', 'vanesaruiz@gmail.com', 2016630188, 'HolaMundo88', '2020-A004');
+
 /*!40000 ALTER TABLE `Alumno` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +107,11 @@ CREATE TABLE `PalabraClave` (
 
 LOCK TABLES `PalabraClave` WRITE;
 /*!40000 ALTER TABLE `PalabraClave` DISABLE KEYS */;
-INSERT INTO `PalabraClave` VALUES (0,'Bases de datos',0),(1,'Lenguaje natural',1),(2,'Web',2),(3,'Minería de datos',3),(4,'Sistemas distribuidos',4);
+INSERT INTO `PalabraClave` VALUES 
+  ('2020-A001', 'ingeniería artificial lenguaje', '01'),
+  ('2020-A002', 'compilador inteligencia robot', '02'),
+	('2020-A003', 'software medicina discapacidad', '03'),
+	('2020-A004', 'gestión software finanzas', '04');
 /*!40000 ALTER TABLE `PalabraClave` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,7 +136,22 @@ CREATE TABLE `Profesor` (
 
 LOCK TABLES `Profesor` WRITE;
 /*!40000 ALTER TABLE `Profesor` DISABLE KEYS */;
-INSERT INTO `Profesor` VALUES (0,'profesor0','profesor0','profesor0'),(1,'profesor1','profesor1','profesor1'),(2,'profesor2','profesor2','profesor2'),(3,'profesor3','profesor3','profesor3'),(4,'profesor4','profesor4','profesor4'),(5,'profesor5','profesor5','profesor5');
+INSERT INTO `Profesor` VALUES 
+	('20139583984', 'Karla Paulette	Flores Silva', 'Clave202000', '20139583984'),
+	('20139587564', 'Paula Salas Ivars', 'Clave202001', '20139587564'),
+	('20139589362', 'Pedro Calleja Casas', 'Clave202002', '20139589362'),
+	('20139546285', 'Xavir Faner Capó', 'Clave202003', '20139546285'),
+	('20139536474', 'Verónica Pablo Fontecha', 'Clave202004', '20139536474'),
+	('20139584321', 'Nila Saez Calveras', 'Clave202005', '20139584321'),
+	('20135998763', 'Marcos Pérez Suárez', 'Clave202006', '20135998763'),
+	('20139546295', 'Margalida Perello Roig', 'Clave202007', '20139546295'),
+	('20169843093', 'Mariana Mosquera Suárez', 'Clave202008', '20169843093'),
+	('20169847381', 'Roberto López Ruiz', 'Clave202009', '20169847381'),
+	('20169845173', 'Juan López Rosas', 'Clave202010', '20169845173'),
+	('20129843093', 'Marcelo Pérez Piña', 'Clave202011', '20129843093'),
+	('20129833001', 'Camila Gutiérrez Hernández', 'Clave202012', '20129833001'),
+	('20129843647', 'Eva Gómez Jiménez', 'Clave202013', '20129843647'),
+	('20119823043', 'Carlos Jiménez Rojas', 'Clave202014', '20119823043');
 /*!40000 ALTER TABLE `Profesor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -135,7 +175,12 @@ CREATE TABLE `Protocolo` (
 
 LOCK TABLES `Protocolo` WRITE;
 /*!40000 ALTER TABLE `Protocolo` DISABLE KEYS */;
-INSERT INTO `Protocolo` VALUES (0,'Analizador de datos online','/home/user/pdf0.pdf'),(1,'Redactor de textos','/home/user/pdf1');
+INSERT INTO `Protocolo` VALUES 
+  ('2020-A001', 'Prototipo de identificación de lenguaje', ''),
+  ('2020-A002', 'Compilador a través de un bot', ''),
+  ('2020-A003', 'Protitpo de ayuda para discapacidad visual', ''),
+  ('2020-A004', 'Plataforma web para ayuda al ahorro', '');
+
 /*!40000 ALTER TABLE `Protocolo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -183,7 +228,22 @@ CREATE TABLE `pertenece` (
 
 LOCK TABLES `pertenece` WRITE;
 /*!40000 ALTER TABLE `pertenece` DISABLE KEYS */;
-INSERT INTO `pertenece` VALUES (0,0),(1,0),(2,0),(3,1),(4,1),(5,1);
+INSERT INTO `pertenece` VALUES
+  ('20139583984', 'ISC-01'),
+	('20139587564', 'ISC-02'),
+	('20139589362', 'ISC-03'),
+	('20139546285', 'ISC-04'),
+	('20139536474', 'ISC-05'),
+	('20139584321', 'ISC-06'),
+	('20135998763', 'ISC-07'),
+	('20139546295', 'ISC-08'),
+	('20169843093', 'ISC-09'),
+	('20169847381', 'ISC-01'),
+	('20169845173', 'ISC-02'),
+	('20129843093', 'ISC-03'),
+	('20129833001', 'ISC-04'),
+	('20129843647', 'ISC-05'),
+	('20119823043', 'ISC-06');
 /*!40000 ALTER TABLE `pertenece` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -206,7 +266,11 @@ CREATE TABLE `tiene` (
 
 LOCK TABLES `tiene` WRITE;
 /*!40000 ALTER TABLE `tiene` DISABLE KEYS */;
-INSERT INTO `tiene` VALUES (0,0),(0,2),(1,1),(1,3);
+INSERT INTO `tiene` VALUES
+  ('2020-A001', '2020-A001'),
+  ('2020-A002', '2020-A002'),
+  ('2020-A003', '2020-A003'),
+  ('2020-A004', '2020-A004');
 /*!40000 ALTER TABLE `tiene` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -218,5 +282,3 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2019-08-22 15:20:27
