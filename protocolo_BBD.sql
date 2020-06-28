@@ -25,7 +25,10 @@ DROP TABLE IF EXISTS `Academia`;
 CREATE TABLE `Academia` (
   `clave` tinyint(4) DEFAULT NULL,
   `nombre` varchar(11) DEFAULT NULL,
-  `presidente` tinyint(4) DEFAULT NULL
+  `presidente` tinyint(4) DEFAULT NULL,
+	PRIMARY KEY (`clave`),
+	KEY `presidente` (`presidente`),
+	CONSTRAINT `Academia_ibfk_1` FOREIGN KEY (`presidente`) REFERENCES `Profesor` (`numEmp`)	
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -62,7 +65,10 @@ CREATE TABLE `Alumno` (
   `email` varchar(21) DEFAULT NULL,
   `usuario` varchar(7) DEFAULT NULL,
   `password` varchar(7) DEFAULT NULL,
-  `numTT` tinyint(4) DEFAULT NULL
+  `numTT` tinyint(4) DEFAULT NULL,
+	PRIMARY KEY (`boleta`),
+	KEY `numTT` (`numTT`),
+	CONSTRAINT `Alumno_ibfk_1` FOREIGN KEY (`numTT`) REFERENCES `Protocolo` (`numTT`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -83,7 +89,6 @@ INSERT INTO `Alumno` VALUES
 	(2016630190, 'Sergio Díaz Juárez', 'sergio283dj@hotmail.com', 2016630190, 'HolaMundo90', '2020-A003'),
 	(2016630189, 'Diego Barrón López', 'diegobarron@gmail.com', 2016630189, 'HolaMundo89', '2020-A003'),
 	(2016630188, 'Vanesa Gutiérrez Ruiz', 'vanesaruiz@gmail.com', 2016630188, 'HolaMundo88', '2020-A004');
-
 /*!40000 ALTER TABLE `Alumno` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -97,7 +102,9 @@ DROP TABLE IF EXISTS `PalabraClave`;
 CREATE TABLE `PalabraClave` (
   `numTT` tinyint(4) DEFAULT NULL,
   `palabra` varchar(21) DEFAULT NULL,
-  `discriminante` tinyint(4) DEFAULT NULL
+  `discriminante` tinyint(4) DEFAULT NULL,
+	PRIMARY KEY (`numTT`),
+  UNIQUE KEY `discriminante` (`discriminante`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -126,7 +133,8 @@ CREATE TABLE `Profesor` (
   `numEmp` tinyint(4) DEFAULT NULL,
   `nombre` varchar(9) DEFAULT NULL,
   `usuario` varchar(9) DEFAULT NULL,
-  `password` varchar(9) DEFAULT NULL
+  `password` varchar(9) DEFAULT NULL,
+	PRIMARY KEY (`numEmp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -165,7 +173,8 @@ DROP TABLE IF EXISTS `Protocolo`;
 CREATE TABLE `Protocolo` (
   `numTT` tinyint(4) DEFAULT NULL,
   `nombreTT` varchar(26) DEFAULT NULL,
-  `ruta_pdf` varchar(19) DEFAULT NULL
+  `ruta_pdf` varchar(19) DEFAULT NULL,
+	PRIMARY KEY (`numTT`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -196,7 +205,12 @@ CREATE TABLE `evaluacion` (
   `ruta_pdf_eval` varchar(0) DEFAULT NULL,
   `estatus` varchar(0) DEFAULT NULL,
   `numTT` varchar(0) DEFAULT NULL,
-  `sinodal` varchar(0) DEFAULT NULL
+  `sinodal` varchar(0) DEFAULT NULL,
+	PRIMARY KEY (`id_evaluacion`),
+  UNIQUE KEY `numTT` (`numTT`,`sinodal`),
+  KEY `sinodal` (`sinodal`),
+  CONSTRAINT `evaluacion_ibfk_1` FOREIGN KEY (`numTT`) REFERENCES `Protocolo` (`numTT`),
+  CONSTRAINT `evaluacion_ibfk_2` FOREIGN KEY (`sinodal`) REFERENCES `Profesor` (`numEmp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -218,7 +232,11 @@ DROP TABLE IF EXISTS `pertenece`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pertenece` (
   `numEmp` tinyint(4) DEFAULT NULL,
-  `clave` tinyint(4) DEFAULT NULL
+  `clave` tinyint(4) DEFAULT NULL,
+	PRIMARY KEY (`numEmp`,`clave`),
+  KEY `clave` (`clave`),
+  CONSTRAINT `pertenece_ibfk_1` FOREIGN KEY (`numEmp`) REFERENCES `Profesor` (`numEmp`),
+  CONSTRAINT `pertenece_ibfk_2` FOREIGN KEY (`clave`) REFERENCES `Academia` (`clave`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -256,7 +274,11 @@ DROP TABLE IF EXISTS `tiene`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tiene` (
   `TT_numTT` tinyint(4) DEFAULT NULL,
-  `PC_numTT` tinyint(4) DEFAULT NULL
+  `PC_numTT` tinyint(4) DEFAULT NULL,
+	PRIMARY KEY (`TT_numTT`,`PC_numTT`),
+  KEY `PC_numTT` (`PC_numTT`),
+  CONSTRAINT `tiene_ibfk_1` FOREIGN KEY (`TT_numTT`) REFERENCES `Protocolo` (`numTT`),
+  CONSTRAINT `tiene_ibfk_2` FOREIGN KEY (`PC_numTT`) REFERENCES `PalabraClave` (`numTT`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
