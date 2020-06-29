@@ -114,7 +114,7 @@ class ModalRegis extends React.Component {
                   placeholder="Palabras claves"
                   type="text"
                   name="keywords"
-                  title="Keyword1,Keyword2,Keyword3"
+                  title="Keyword1_Keyword2_Keyword3"
                   onChange={this.handleChange}
                 />
               </InputGroup>
